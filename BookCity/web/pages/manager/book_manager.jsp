@@ -34,10 +34,11 @@
 
 	</div>
 	
-	<div id="main">
-		<table>
+	<div id="main" class="manager">
+		<table >
 			<tr>
-				<td>名称</td>
+				<td>名称</td>	
+				<td>图片</td>
 				<td>价格</td>
 				<td>作者</td>
 				<td>销量</td>
@@ -47,6 +48,7 @@
 			<c:forEach items="${requestScope.page.items}" var="book">
 				<tr>
 					<td>${book.name}</td>
+					<td><img src="${book.imgPath}" style="width: 40px;height: 40px"></td>
 					<td>${book.price}</td>
 					<td>${book.author}</td>
 					<td>${book.sales}</td>

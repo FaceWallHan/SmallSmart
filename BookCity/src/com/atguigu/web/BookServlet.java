@@ -5,11 +5,16 @@ import com.atguigu.bean.Page;
 import com.atguigu.service.BookService;
 import com.atguigu.service.impl.BookServiceImpl;
 import com.atguigu.util.WebUtils;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -20,7 +25,6 @@ public class BookServlet extends BaseServlet {
         pageNo+=1;
         Book book= WebUtils.copyParamToBean(request.getParameterMap(), new Book());
         bookService.addBook(book);
-//        request.getRequestDispatcher("/manager/bookServlet?action=list").forward(request, response);
         response.sendRedirect(request.getContextPath()+"/manager/bookServlet?action=page&pageNo="+pageNo);
     }
     protected void page(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

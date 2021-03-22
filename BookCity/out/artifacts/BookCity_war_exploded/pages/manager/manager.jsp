@@ -19,7 +19,7 @@
 <body>
 	
 	<div id="header">
-			<img  style="height: 80px;width: 80px" class="logo_img" alt="" src="static/img/system.jpg"" >
+			<img  style="height: 80px;width: 80px" class="logo_img" alt="" src="static/img/system.jpg" >
 			<span class="wel_word">后台管理系统</span>
 
 		<%-- 静态包含 manager管理模块的菜单  --%>

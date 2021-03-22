@@ -39,7 +39,6 @@
 					<tr>
 						<td>${order.createTime}</td>
 						<td>${order.price}</td>
-<%--						<td>${order.status}</td>--%>
 						<td>
 						<c:choose>
 							<c:when test="${order.status == 'SHIP'}">待发货</c:when>
@@ -50,7 +49,6 @@
 								<a class="signClass" href="orderServlet?action=signOrder&orderId=${order.orderId}">待收货</a>
 							</c:when>
 							<c:when test="${order.status == 'SIGNED'}">已签收</c:when>
-<%--							<c:otherwise></c:otherwise>--%>
 						</c:choose>
 						</td>
 						<td><a href="orderServlet?action=showOrderDetail&orderId=${order.orderId}">查看详情</a></td>

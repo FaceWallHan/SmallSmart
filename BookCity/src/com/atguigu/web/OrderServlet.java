@@ -33,7 +33,6 @@ public class OrderServlet extends BaseServlet {
             //返回页面
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
         }
-
     }
     /**
      * 签收订单
@@ -55,7 +54,6 @@ public class OrderServlet extends BaseServlet {
         req.setAttribute("orderList", orderList);
         //返回页面
         req.getRequestDispatcher("/pages/order/order.jsp").forward(req, resp);
-
     }
     protected void createOrder(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cart cart = (Cart) request.getSession().getAttribute("cart");
@@ -123,6 +121,28 @@ public class OrderServlet extends BaseServlet {
         req.setAttribute("allOrder", allOrder);
         //返回页面
         req.getRequestDispatcher("/pages/manager/order_manager.jsp").forward(req, resp);
-
+    }
+    /**
+     * 支付
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void payOrder(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //获取订单号
+        String orderId = req.getParameter("orderId");
+        //支付
+        orderService.payOrder(orderId);
+        //获取购物车
+        Cart cart = (Cart) req.getSession().getAttribute("cart");
+        if(cart != null) {
+            //支付完的东西清空购物车
+            req.getSession().removeAttribute("cart");
+        }
+        //回传数据
+        req.getSession().setAttribute("orderId", orderId);
+        //返回页面
+        req.getRequestDispatcher("/pages/cart/checkout.jsp").forward(req, resp);
     }
 }

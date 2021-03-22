@@ -4,21 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <title>编辑图书</title>
-
 	<%-- 静态包含 base标签、css样式、jQuery文件 --%>
 	<%@ include file="/pages/common/head.jsp"%>
-
-
 	<style type="text/css">
 	h1 {
 		text-align: center;
 		margin-top: 200px;
 	}
-	
 	h1 a {
 		color:red;
 	}
-	
 	input {
 		text-align: center;
 	}
@@ -32,7 +27,7 @@
 			<%@include file="/pages/common/manager_menu.jsp"%>
 		</div>
 		<div id="main">
-			<form action="manager/bookServlet" method="get">
+			<form action="manager/bookServlet" method="get" enctype="multipart/form-data">
 				<input type="hidden" name="pageNo" value="${param.pageNo}">
 				<input type="hidden" name="action" value="${empty requestScope.book ?"add":"update"}">
 				<input type="hidden" name="id" value="${requestScope.book.id}">
@@ -40,7 +35,7 @@
 					<tr>
 						<td>名称</td>
 						<td>价格</td>
-						<td>作者</td>
+						<td>产地</td>
 						<td>销量</td>
 						<td>库存</td>
 						<td colspan="2">操作</td>
