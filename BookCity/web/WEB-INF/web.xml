@@ -75,6 +75,14 @@
         <servlet-name>OrderServlet</servlet-name>
         <servlet-class>com.atguigu.web.OrderServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManagerServlet</servlet-name>
+        <servlet-class>com.atguigu.web.ManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerServlet</servlet-name>
+        <url-pattern>/managerServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OrderServlet</servlet-name>
         <url-pattern>/orderServlet</url-pattern>

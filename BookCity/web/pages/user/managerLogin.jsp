@@ -44,15 +44,15 @@
 		<div id="login_header">
 			<img  style="height: 80px;width: 80px" class="logo_img" alt="" src="static/img/system.jpg" >
 		</div>
-			<div class="login_banner">
+			<div class="manager_banner">
 				<div id="l_content">
-					<span class="login_word">欢迎登录</span>
+					<span class="login_word">管理员登录</span>
 				</div>
 				<div id="content">
 					<div class="login_form">
 						<div class="login_box">
 							<div class="tit">
-								<h1>尚硅谷会员</h1>
+								<h1>商城管理员</h1>
 							</div>
 							<div class="msg_cont">
 								<b></b>
@@ -61,7 +61,7 @@
 								</span>
 							</div>
 							<div class="form">
-								<form action="userServlet" method="post">
+								<form action="managerServlet" method="post">
 									<input type="hidden" name="action" value="login" />
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名"

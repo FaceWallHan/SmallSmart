@@ -13,11 +13,11 @@
 </style>
 </head>
 <body>
-	<div id="header">
-			<img class="logo_img" alt="" src="static/img/logo.gif" >
-			<span class="wel_word">订单详情</span>
-			<%@ include file="/pages/common/login_success_menu.jsp" %>
-	</div>
+<%--	<div id="header">--%>
+<%--			<img class="logo_img" alt="" src="static/img/logo.gif" >--%>
+<%--			<span class="wel_word">订单详情</span>--%>
+<%--			<%@ include file="/pages/common/login_success_menu.jsp" %>--%>
+<%--	</div>--%>
 
 	<div id="main">
 
@@ -42,6 +42,6 @@
 
 	</div>
 
-	<%@ include file="/pages/common/footer.jsp" %>
+<%--	<%@ include file="/pages/common/footer.jsp" %>--%>
 </body>
 </html>

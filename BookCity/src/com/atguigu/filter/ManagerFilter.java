@@ -1,5 +1,6 @@
 package com.atguigu.filter;
 
+import com.atguigu.bean.Manager;
 import com.atguigu.bean.User;
 
 import javax.servlet.*;
@@ -12,9 +13,9 @@ public class ManagerFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request= (HttpServletRequest) req;
-        User user = (User) request.getSession().getAttribute("user");
-        if (user==null){
-            request.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
+        Manager manager = (Manager) request.getSession().getAttribute("manager");
+        if (manager==null){
+            request.getRequestDispatcher("/pages/user/managerLogin.jsp").forward(req, resp);
         }else {
             chain.doFilter(req, resp);
         }

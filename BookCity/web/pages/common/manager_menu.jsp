@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -7,7 +8,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div>
-    <a href="manager/bookServlet?action=page">图书管理</a>
-    <a href="orderServlet?action=showAllOrders">订单管理</a>
+<%--    <c:if test="${ not empty sessionScope.manager.username}">--%>
+<%--        <a href="manager/bookServlet?action=page">图书管理</a>--%>
+<%--        <a href="orderServlet?action=showAllOrders">订单管理</a>--%>
+<%--    </c:if>--%>
     <a href="">返回商城</a>
 </div>

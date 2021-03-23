@@ -20,12 +20,12 @@
 </style>
 </head>
 <body>
-		<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
-			<span class="wel_word">编辑图书</span>
-			<%-- 静态包含 manager管理模块的菜单  --%>
-			<%@include file="/pages/common/manager_menu.jsp"%>
-		</div>
+<%--		<div id="header">--%>
+<%--			<img class="logo_img" alt="" src="../../static/img/logo.gif" >--%>
+<%--			<span class="wel_word">编辑图书</span>--%>
+<%--			&lt;%&ndash; 静态包含 manager管理模块的菜单  &ndash;%&gt;--%>
+<%--			<%@include file="/pages/common/manager_menu.jsp"%>--%>
+<%--		</div>--%>
 		<div id="main">
 			<form action="manager/bookServlet" method="get" enctype="multipart/form-data">
 				<input type="hidden" name="pageNo" value="${param.pageNo}">
@@ -52,6 +52,6 @@
 			</form>
 		</div>
 		<%--静态包含页脚内容--%>
-		<%@include file="/pages/common/footer.jsp"%>
+<%--		<%@include file="/pages/common/footer.jsp"%>--%>
 </body>
 </html>

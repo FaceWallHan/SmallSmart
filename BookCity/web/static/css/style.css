@@ -26,7 +26,7 @@ div{
 	height: 460px;
 	width: 1200px;
 	border: 1px black solid;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 #bottom {
 	height: 30px;
@@ -124,6 +124,10 @@ div{
 .login_banner{
 	height:475px;
 	background-color: #39987c;
+}
+.manager_banner{
+	height:475px;
+	background-color: #c96fc7;
 }
 
 .login_form{

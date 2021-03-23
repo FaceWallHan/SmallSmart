@@ -40,6 +40,7 @@ public class UserServlet extends BaseServlet {
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("user", login);
+            session.setAttribute("manager", null);
             session.setMaxInactiveInterval(60*10);
             request.getRequestDispatcher("/pages/user/login_success.jsp").forward(request, response);
         }
